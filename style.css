@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100%;
+    font-family: 'M PLUS 1p', sans-serif;
+    background-color: rgb(233, 207, 208);
+}
+
+.wrapper-bg {
+    background: url(bg.jpeg) no-repeat;
+    background-size: cover;
+}
+.intro {
+    height: 100%;
+    width: 100%;
+    padding: 6rem 4rem 0rem 4rem;
+    text-align: center;
+    font-family: 'M PLUS 1p', sans-serif;
+
+
+}
+
+.container-custom {
+    text-align: left;
+    background-color: #ffffff;
+    /* 色を薄くする*/
+    filter:alpha(opacity=80); 
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+    /* 色を薄くする ここまで*/
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 150%;
+    padding: 3%;
+}
+
+
+footer{
+    text-align: center;
+    font-size: 80%;
+    text-shadow: 2px 2px 0 #ffffff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/*---Media Queries --*/
+@media (max-width: 992px) {
+    .wrapper-bg {
+    background: none;
+    background-color: rgb(233, 207, 208);
+}
+}
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 150%;
+    }
+    p {
+    font-size: 130%;
+   } 
+    .container-custom  {
+        margin: 8%;
+        font-size: 130%;
+        line-height: 150%;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro h1 {
+        font-size: 140%;
+    }
+p {
+    font-size: 80%;
+   } 
+.container-custom  {
+        margin: 15%;
+        font-size: 100%;
+        line-height: 150%;
+        padding: 8%;
+    }
+    } 
