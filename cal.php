@@ -79,6 +79,7 @@ function calc_time($d_t3, $user_timezone,$language) {
                 $time_diff = "+9";
                 break;
             case "GMT":
+                $time_diff = "0";
                 break;
             case "EST":
                 $time_diff = "-5";
@@ -87,11 +88,8 @@ function calc_time($d_t3, $user_timezone,$language) {
                 $time_diff = "-8";
                 break;
         }
-        if($timezone_array[$i] == "GMT") {
-            $d_t4 = $d_t3;
-        } else {
             $d_t4 = strtotime(" $time_diff hour", $d_t3);  
-        }
+            
         if($language == "eng") {
             show_result_eng($d_t4,$timezone_array[$i]);
         } else {
@@ -124,7 +122,6 @@ case JST:
     break;
 case GMT:
     $d_t3 = $d_t2;  //単なる代入
-
     calc_time($d_t3,$timezone,"eng");
     echo '<br/>日本語では<br/>';
     calc_time($d_t3,$timezone,"jpl");
